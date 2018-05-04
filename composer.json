@@ -1,0 +1,20 @@
+{
+    "name": "tunerprime/oauth2-kakao",
+    "description": "Kakao OAuth 2.0 Client",
+    "require": {
+        "php": ">=5.5.0",
+        "league/oauth2-client": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Woojoo Lee",
+            "email": "dldnwn5052@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TunerPrime\\OAuth2\\Client\\": "src/"
+        }
+    }
+}
