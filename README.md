@@ -4,11 +4,11 @@ extension league/OAuth2-client version by Kakao
 
 Example Code
 
-        $provider = new TunerPrime\OAuth2\Client\Provider\Kakao([
-            'clientId'     => '{kakao-client-Id}',
-            'clientSecret' => '{kakao-client-secret}',
-            'redirectUri'  => '{your-redirect-Uri}',
-        ]);
+    $provider = new TunerPrime\OAuth2\Client\Provider\Kakao([
+        'clientId'     => '{kakao-client-Id}',
+        'clientSecret' => '{kakao-client-secret}',
+        'redirectUri'  => '{your-redirect-Uri}',
+    ]);
     
     if (!empty($_GET['error'])) {
     
