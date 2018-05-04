@@ -1,6 +1,9 @@
 # oauth2-kakao
 extension league/OAuth2-client version by Kakao
 
+Composer install
+
+    composer require tunerprime/oauth2-kakao
 
 Example Code
 
