@@ -9,7 +9,7 @@ Example Code
 
     $provider = new TunerPrime\OAuth2\Client\Provider\Kakao([
         'clientId'     => '{kakao-client-Id}',
-        'clientSecret' => '{kakao-client-secret}',
+        'clientSecret' => '{kakao-client-secret}', // kakao isn't must require clientsecret! 
         'redirectUri'  => '{your-redirect-Uri}',
     ]);
     
