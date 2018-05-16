@@ -7,7 +7,6 @@ class KakaoUser implements ResourceOwnerInterface{
 	protected $response;
 	
 	public function __construct($response = array()){
-		var_dump($response);
 		$this->response = $response;
 	}
 	public function getId(){
