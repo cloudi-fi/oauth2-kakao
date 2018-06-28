@@ -7,9 +7,13 @@ use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
 
 class Kakao extends AbstractProvider{
-	const BASE_KAKAO_URL = 'https://kauth.kakao.com/oauth/';
+	public $version = '';
 	
-	const BASE_KAKAO_PROFILE_URL = 'https://kapi.kakao.com/v1/user/me';
+	public $base_kakao_oauth_url = 'https://kauth.kakao.com/oauth/';
+	
+	public $base_kakao_api_url = 'https://kapi.kakao.com/';
+	
+	public $base_kakao_profile_url = "/user/me";
 	
 	public function __construct(array $options = [], array $collaborators = [])
 	{
@@ -17,16 +21,16 @@ class Kakao extends AbstractProvider{
 	}
 	
 	public function getBaseAuthorizationUrl(){
-		return static::BASE_KAKAO_URL.'authorize';
+		return $this->base_kakao_oauth_url.'authorize';
 	}
 	
 	public function getBaseAccessTokenUrl(array $params){
-		return static::BASE_KAKAO_URL.'token';
+		return $this->base_kakao_oauth_url.'token';
 	}
 	
 	public function getResourceOwnerDetailsUrl(AccessToken $token)
 	{
-		return static::BASE_KAKAO_PROFILE_URL;
+		return $this->base_kakao_api_url.$this->version.$this->base_kakao_profile_url;
 	}
 	
 	protected function getDefaultScopes()
