@@ -1,5 +1,5 @@
 <?php
-namespace TunerPrime\OAuth2\Client\Provider;
+namespace League\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
