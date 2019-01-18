@@ -1,8 +1,9 @@
-<?php namespace TunerPrime\OAuth2\Client\Provider;
+<?php 
 
+namespace League\OAuth2\Client\Provider;
 
+use League\OAuth2\Client\Provider\Exception\KakaoIdentityProviderException;
 use League\OAuth2\Client\Provider\AbstractProvider;
-use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
 
@@ -44,7 +45,7 @@ class Kakao extends AbstractProvider{
 	
 	protected function checkResponse(ResponseInterface $response, $data)
 	{
-		if( $response->getStatusCode() != '200' ) {
+        if ($response->getStatusCode() >= 400) {
 			throw new IdentityProviderException($response->getBody(), $response->getStatusCode(), $data);
 		}
 	}
