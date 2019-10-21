@@ -1,5 +1,5 @@
 {
-    "name": "cloudi-fi/oauth2-kakao",
+    "name": "cloudifi/oauth2-kakao",
     "description": "Kakao OAuth 2.0 Client",
     "require": {
         "php": ">=5.5.0",
