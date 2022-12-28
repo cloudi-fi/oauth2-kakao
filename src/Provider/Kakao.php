@@ -8,7 +8,7 @@ use League\OAuth2\Client\Token\AccessToken;
 use Psr\Http\Message\ResponseInterface;
 
 class Kakao extends AbstractProvider{
-	public $version = 'v1';
+	public $version = 'v2';
 	
 	public $base_kakao_oauth_url = 'https://kauth.kakao.com/oauth/';
 	
